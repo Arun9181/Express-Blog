@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs") %>
+</head>
+<body>
+    <%- include("./partials/nav.ejs") %>
+    <div class="blogdata">
+        <h3><%= blog.title %></h3>
+        <p><%= blog.snippet %></p>
+        <p><%= blog.body %></p>
+        <form action="/blog/<%= blog._id %>?_method=DELETE" method="post">
+          <input type="hidden" name="_method" value="DELETE">
+            <button type="submit" id="delBtn">Delete</button>
+            <!-- <button type="submit"><i class="fa-solid fa-trash-can"></i></button> -->
+        </form>
+    </div>
+    <%- include("./partials/footer.ejs") %>
+</body>
+</html>

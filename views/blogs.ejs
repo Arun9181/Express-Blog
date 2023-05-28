@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+<body>
+  
+    <%- include("./partials/nav.ejs") %>
+   <div class="form"  style="background-color: rgb(130, 160, 100);">
+    <form action="/blog" method="post" style="display: flex; flex-direction: column; line-height: normal; line-break: auto; justify-content: space-evenly; text-align: center; width: 500px; margin-left: 30%">
+       <label for="title">Title:</label> <br>
+       <input type="text" name="title" id="title"> <br>
+       <label for="snippet">Snippet:</label> <br>
+       <input type="text" name="snippet" id="snippet"> <br>
+       <label for="body">Body:</label> <br>
+       <textarea name="body" id="body" cols="30" rows="10"></textarea> <br>
+       <button type="submit" style="background-color: blue; margin-left: 30%; width: 150px; color: white; border-radius: 10px; border-color: rgb(174, 161, 161);">Submit</button> <br>
+     </form>
+   </div>
+   <%- include("./partials/footer.ejs") %>
+
+</body>
+</html>
